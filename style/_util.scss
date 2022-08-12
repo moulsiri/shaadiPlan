@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'gilroy';
+}
+html,body{
+    width:100%;
+}
+a{
+    text-decoration: none;
+}
+
+$primaryFont:'Montserrat';
+$secondaryFont:'Merriweather', serif;
+$fontSize:13px;
+
+$colors:(
+    'r':#FB1B26,
+    'w':#fff,
+    'b':#000,
+    'v':#222222,
+    'g':rgb(121, 120, 120),
+    'dr':#B5141B
+);
+
+@function colors($c){
+    @return map-get($colors,$c);
+}
+.btn{
+    padding:.5em 1em;
+    border:none;
+    letter-spacing: 1px;
+    background-color: colors(w);
+    border:1px solid #eee;
+}
+@mixin media($size) {
+    @media (max-width:$size) {
+        @content;
+    }
+    
+}
+@mixin minMedia($size) {
+    @media (min-width:$size) {
+        @content;
+    }
+    
+}
+
+@font-face {
+    font-family: "gilroy";
+    src: url('../fonts/gilroy/Gilroy-Regular.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "gilroy";
+    src: url('../fonts/gilroy/Gilroy-Medium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "gilroy";
+    src: url('../fonts/gilroy/Gilroy-Bold.otf');
+    font-weight: 900;
+}
